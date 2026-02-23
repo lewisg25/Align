@@ -29,5 +29,4 @@ In a world of endless digital distractions, our most important relationships oft
 
 ### Installation
 1. **Clone the repo:**
-   ```bash
 https://github.com/lewisg25/Align.git
