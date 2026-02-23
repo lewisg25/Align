@@ -1,5 +1,235 @@
 /* RESET */
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* =========================
+   THEME VARIABLES
+========================= */
+:root {
+  --bg-gradient: radial-gradient(circle at top, #1f2b28, #0e1514);
+  --text-color: #ffffff;
+  --muted-text: #94a3b8;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --accent: #7ed6b5;
+  --section-bg: #0f172a;
+  --footer-bg: #0b1120;
+}
+
+body.light-mode {
+  --bg-gradient: radial-gradient(circle at top, #f4f7f6, #dfe9e6);
+  --text-color: #1f2b28;
+  --muted-text: #475569;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(0, 0, 0, 0.05);
+  --accent: #3e5c54;
+  --section-bg: #ffffff;
+  --footer-bg: #e2e8f0;
+}
+
+body {
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  transition: 0.4s ease;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--muted-text);
+  font-size: 14px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--text-color);
+}
+
+.btn-solid {
+  background: var(--accent);
+  color: #0e1514;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  margin-top: 10px;
+  color: var(--muted-text);
+}
+
+.card {
+  margin-top: 30px;
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+}
+
+.hero-btn {
+  margin-top: 25px;
+  padding: 12px 28px;
+  border-radius: 25px;
+  border: none;
+  background: var(--accent);
+  color: #0e1514;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================
+   FEATURES
+========================= */
+/* .features {
+  padding: 80px 20px;
+  background: var(--section-bg);
+} */
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: var(--card-bg);
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid var(--card-border);
+  transition: 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-card p {
+  color: var(--muted-text);
+}
+
+/* =========================
+   CTA SECTION
+========================= */
+/* .cta-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, var(--section-bg), var(--card-bg));
+  text-align: center;
+} */
+
+.cta-tags {
+  margin: 25px 0;
+  color: var(--muted-text);
+}
+
+.cta-button {
+  background: var(--accent);
+  color: #0e1514;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* =========================
+   FOOTER
+========================= */
+/* .footer {
+  background: var(--footer-bg);
+  padding: 70px 20px 30px;
+} */
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: var(--muted-text);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid var(--card-border);
+  padding-top: 20px;
+}
+
+/* =========================
+   TOGGLE BUTTON
+========================= */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--text-color);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.features,
+.cta-section,
+.footer {
+  padding: 80px 20px;
+  background: transparent; /* uses body gradient */
+}
+/* RESET
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,26 +243,26 @@
   }
   
   /* NAVBAR */
-  .navbar {
+  /* .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-  }
+  } */
   
-  .logo {
+  /* .logo {
     font-weight: 600;
     letter-spacing: 2px;
   }
-  
-  .nav-links a {
+   */
+  /* .nav-links a {
     margin: 0 15px;
     text-decoration: none;
     color: #cbd5d1;
     font-size: 14px;
-  }
+  } */
   
-  .auth-buttons button {
+  /* .auth-buttons button {
     margin-left: 10px;
     padding: 8px 16px;
     border-radius: 20px;
@@ -50,20 +280,20 @@
   .btn-solid {
     background: #3e5c54;
     color: white;
-  }
+  } */
   
   /* HERO */
-  .hero {
+  /* .hero {
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
+  } */
   
   /* ICON */
-  .icon-circle {
+  /* .icon-circle {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -73,10 +303,10 @@
     align-items: center;
     margin-bottom: 20px;
     font-size: 20px;
-  }
+  } */
   
   /* HEADINGS */
-  h1 {
+  /* h1 {
     font-size: 40px;
     font-weight: 500;
   }
@@ -89,10 +319,10 @@
     margin-top: 10px;
     color: #94a3b8;
     font-size: 16px;
-  }
+  } */
   
   /* CARD */
-  .card {
+  /* .card {
     margin-top: 30px;
     background: rgba(255, 255, 255, 0.05);
     padding: 30px;
@@ -115,10 +345,10 @@
   .card li {
     margin-bottom: 10px;
     color: #cbd5d1;
-  }
+  } */
   
   /* CTA BUTTON */
-  .cta {
+  /* .cta {
     margin-top: 25px;
     padding: 12px 28px;
     border-radius: 25px;
@@ -133,12 +363,12 @@
   .cta:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(126, 214, 181, 0.3);
-  }
+  } */
 
 
 
   /* THEME VARIABLES */
-:root {
+/* :root {
     --bg-gradient: radial-gradient(circle at top, #1f2b28, #0e1514);
     --text-color: white;
     --card-bg: rgba(255, 255, 255, 0.05);
@@ -154,41 +384,41 @@
     --card-border: rgba(0, 0, 0, 0.05);
     --accent: #3e5c54;
     --navbar-bg: rgba(255, 255, 255, 0.6);
-  }
+  } */
   
   /* Apply Variables */
-  body {
+  /* body {
     height: 100vh;
     background: var(--bg-gradient);
     color: var(--text-color);
     transition: background 0.4s ease, color 0.4s ease;
-  }
+  } */
   
   /* Card */
-  .card {
+  /* .card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-  }
+  } */
   
   /* Accent Text */
-  h1 span {
+  /* h1 span {
     color: var(--accent);
-  }
+  } */
   
   /* CTA Button */
-  .cta {
+  /* .cta {
     background: var(--accent);
     color: #0e1514;
-  }
+  } */
   
   /* Navbar Scroll */
-  .navbar.scrolled {
+  /* .navbar.scrolled {
     background: var(--navbar-bg);
     backdrop-filter: blur(10px);
-  }
+  } */
   
   /* Theme Toggle Button */
-  .theme-toggle {
+  /* .theme-toggle {
     background: transparent;
     border: 1px solid var(--accent);
     color: var(--text-color);
@@ -203,3 +433,147 @@
   .theme-toggle:hover {
     transform: rotate(15deg);
   }
+
+
+  .features {
+    padding: 80px 20px;
+    background-color: #0f172a; /* dark navy */
+  /* } */
+  
+  /* .features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .feature-card {
+    background: #1e293b;
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .feature-card h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .feature-card p {
+    color: #94a3b8;
+    font-size: 15px;
+    line-height: 1.6; */
+  /* } */ */
+
+
+
+  /* CTA SECTION */
+/* .cta {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.cta p {
+  color: #94a3b8;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.cta-tags {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.cta-button {
+  background-color: #22c55e;
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #16a34a;
+} */
+
+/* FOOTER */
+/* .footer {
+  background-color: #0b1120;
+  padding: 70px 20px 30px;
+  color: #94a3b8;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #94a3b8;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  font-size: 14px; */
+/* } */ 
