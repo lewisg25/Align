@@ -1,139 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <title>ALIGN</title>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ALIGN</title>
+  </head>
 
-    <body>
-        <!--NAVBAR-->
-        <header class="navbar">
-            <div class="logo">♡ ALIGN</div>
-            <nav class="nav-links">
-                <a href="#">How it Works</a>
-                <a href="#">Products</a>
-                <a href="#">Programs</a>
-                <a href="#">Contact</a>
+  <body>
+    <!--NAVBAR-->
+    <header class="navbar">
+      <a href="/" class="logo">
+        <span aria-hidden="true">♡</span> ALIGN
+      </a>
 
-            </nav>
-            <div class="auth-buttons">
-                <button id="themeToggle" class="theme-toggle">🌙</button>
-                <button class="btn-outline">Get Started</button>
-                <button class="btn-solid"> Sign In</button>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="how-it-works.html">How it Works</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="Programs.html">Programs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-            </div>
-        </header>
+      <div class="auth-buttons">
+        <button class="theme-toggle">
+          <span>🌙</span>
+        </button>
+        <button class="btn-outline">Get Started</button>
+        <button class="btn-solid">Sign In</button>
+      </div>
+    </header>
 
-        <!--Section 1-->
-        <section class="hero">
-            <div class="icon-circle">✦</div>
-            <h1>Welcome to <span>ALIGN</span></h1>
-            <p class="subtitle">Let's begin your journey to deeper connection.</p>
-            <div class="card">
-                <h3>What to expect:</h3>
-                <ul>
-                    <li>✔ A quick questionnaire about your relationship</li>
-                    <li>✔ Personalized program recommendations</li>
-                    <li>✔ Option to invite your partner</li>
-                </ul>
-            </div>
-            <button class="cta">Let's Begin →</button>
-        </section>
-    <!--Section2 -->
-    <section class="features">
+    <main>
+      <section class="hero">
+        <div class="icon-circle">✦</div>
+        <h1 id="hero-heading">Welcome to <span>ALIGN</span></h1>
+        <p class="subtitle">Stay Emotionally & Mentally Aligned Together</p>
+        <p>Discover aligmnet gaps, strengthen your bond with daily prompts, and build a deeper connection with your
+          partner through guided emtional check-ins.</p>
+
+        <figure class="card">
+          <caption class="">
+            <h3>What to expect:</h3>
+          </caption>
+          <ul>
+            <li> A quick questionnaire about your relationship</li>
+            <li>Personalized program recommendations</li>
+            <li> Option to invite your partner</li>
+          </ul>
+        </figure>
+
+        <button class="cta">Let's Begin→</button>
+      </section>
+
+      <section class="features" aria-label="Features">
         <div class="features-container">
-          
-          <div class="feature-card">
-            <div class="icon">❤️</div>
+          <article class="feature-card">
+            <div class="icon" aria-hidden="true">❤️</div>
             <h3>Daily Prompts</h3>
             <p>Thoughtful questions to spark meaningful conversations and emotional check-ins.</p>
-          </div>
-      
-          <div class="feature-card">
-            <div class="icon">👥</div>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon" aria-hidden="true">👥</div>
             <h3>Partner Connection</h3>
             <p>Link accounts to share your journey and see alignment insights together.</p>
-          </div>
-      
-          <div class="feature-card">
-            <div class="icon">✨</div>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon" aria-hidden="true">✨</div>
             <h3>Discover Gaps</h3>
             <p>Identify areas where you can grow closer and understand each other better.</p>
-          </div>
-      
+          </article>
         </div>
       </section>
 
-      <!-- CTA SECTION -->
-<section class="cta">
-    <div class="cta-container">
-      <h2>Ready to Align?</h2>
-      <p>
-        Join thousands of couples who are building stronger, more connected relationships.
-      </p>
-  
-      <div class="cta-tags">
-        <span>✔ Free to start</span>
-        <span>✔ No credit card required</span>
-        <span>✔ Cancel anytime</span>
+      <section class="cta-banner" aria-labelledby="cta-heading">
+        <div class="cta-container">
+          <h2 id="cta-heading">Ready to Align?</h2>
+          <p>Join thousands of couples who are building stronger, more connected relationships.</p>
+
+          <ul class="cta-tags" role="list">
+            <li>✔Free to start</li>
+            <li>✔ No credit card required</li>
+            <li>✔ Cancel anytime</li>
+          </ul>
+
+          <button class="cta-button">Get Started</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <section class="footer-col" aria-label="About Align">
+          <h3><span aria-hidden="true">❤️</span> ALIGN</h3>
+          <p>Stay emotionally & mentally aligned together. Build deeper connections with your partner.</p>
+        </section>
+
+        <nav class="footer-col" aria-label="Footer Quick Links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Get Started</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Legal Links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <section class="footer-col" aria-label="Contact Us">
+          <h4>Get in Touch</h4>
+          <p>Subscribe for updates or send a message.</p>
+          <!-- <form action="#" method="POST" class="contact-form">
+            <label for="footer-email" class="sr-only">Email Address</label>
+            <input type="email" id="footer-email" name="email" placeholder="Your Email" required>
+
+            <label for="footer-message" class="sr-only">Message</label>
+            <textarea id="footer-message" name="message" placeholder="Your Message" rows="1"></textarea>
+
+            <button type="submit" class="btn btn-solid">Send Message</button>
+          </form> -->
+        </section>
       </div>
-  
-      <button class="cta-button">Get Started</button>
-    </div>
-  </section>
-  
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-container">
-  
-      <div class="footer-col">
-        <h3>❤️ ALIGN</h3>
-        <p>Stay emotionally & mentally aligned together. Build deeper connections with your partner.</p>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ALIGN. All rights reserved. Made with <span aria-label="love">❤️</span> for couples.</p>
       </div>
-  
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#">How It Works</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Programs</a></li>
-          <li><a href="#">Get Started</a></li>
-        </ul>
-      </div>
-  
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-  
-      <div class="footer-col">
-        <h4>Get in Touch</h4>
-        <p>Subscribe for updates or send a message.</p>
-        <form action="#" method="POST" class="contact-form">
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" rows="1"></textarea>
-          <button type="submit" class="btn btn-solid">Send Message</button>
-        </form>
-        <p>📧 lewis.garnett96@yahoo.com</p>
-        <p>📞 (270) 952 9944</p>
-        <p>📍 Lansdale, PA</p>
-      </div>
-  
-    </div>
-  
-    <div class="footer-bottom">
-      <p>© 2026 ALIGN. All rights reserved. Made with ❤️ for couples.</p>
-    </div>
-  </footer>
-    </body>
-    <script src="app.js"></script>
+    </footer>
+  </body>
+  <script src="app.js"></script>
 
 </html>
